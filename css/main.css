@@ -29,6 +29,7 @@
   cursor: pointer;
 }
 
+
 /* End language */
 body {
   background-color: rgba(0, 0, 0, 0.75);
@@ -37,9 +38,6 @@ body {
 }
 
 /* Start chat */
-/* .ssssss {
-  display: none;
-} */
 .boxChat {
   position: fixed !important;
   right: 50px;
@@ -63,8 +61,13 @@ body {
   align-items: center;
 }
 
+/* .ssssss {
+  transition: 3s;
+  transform: translateY(120px);
+} */
 .boxChat .fullchat {
   display: none;
+  
 }
 
 .boxChat .fullchat .chat #MiniMaze {
@@ -109,7 +112,17 @@ body {
 .boxChat .messagepage .divP {
   display: block;
   max-height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+.boxChat .messagepage .divP::-webkit-scrollbar{
+  width: 12px;  
+}
+.boxChat .messagepage .divP::-webkit-scrollbar-track{
+  background-color: #f6f6f6;
+}
+.boxChat .messagepage .divP::-webkit-scrollbar-thumb{
+  background-color: #ddd;
+  border-radius: 4px;
 }
 
 .boxChat .messagepage #left {
@@ -160,7 +173,8 @@ body {
 
 .boxChat .messagepage .boxmessage textarea {
   outline: none;
-  /* text-align: right; */
+  text-align: right;
+  padding: 0 15px 0 0;
   resize: none;
   height: 50px;
   border-radius: 50px;

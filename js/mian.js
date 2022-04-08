@@ -1,19 +1,19 @@
 // Start Up To Top
 let UPTOTOP = document.querySelector(".UP-TO-TOP");
 
-window.onscroll = function (){
-  if(scrollY>=1100){
+window.onscroll = function () {
+  if (scrollY >= 1100) {
     UPTOTOP.style.display = "block";
-  }else{
+  } else {
     UPTOTOP.style.display = "none";
   }
-  UPTOTOP.onclick = function (){
+  UPTOTOP.onclick = function () {
     window.scroll({
       top: 0,
-      behavior: "smooth"
-    })
-  }
-}
+      behavior: "smooth",
+    });
+  };
+};
 // End Up To Top
 
 // Start language
@@ -75,43 +75,49 @@ function myFunction() {
 }
 // End language
 
-
 /* Start chat */
 
 var imgBoxChat = document.getElementById("imgBoxChat");
 var fullchat = document.querySelector(".fullchat");
+var imgSend = document.getElementById("img-send");
+var textarea = document.getElementById("textarea");
+var pLeft = document.getElementById("left");
+var MiniMaze = document.getElementById("MiniMaze");
+
 imgBoxChat.onclick = function () {
   // fullchat.classList.toggle("ssssss");
   fullchat.style.display = "block";
   imgBoxChat.style.display = "none";
-}
+};
 
-var MiniMaze = document.getElementById("MiniMaze");
+
 MiniMaze.onclick = function () {
   fullchat.style.display = "none";
   imgBoxChat.style.display = "block";
-}
+};
 
-var imgSend = document.getElementById("img-send");
-var textarea = document.getElementById("textarea").value;
-var pLeft = document.getElementById("left").value = "dghoshgiohsiug";
+
+
+  var textareaValue = textarea.value;
+
+var pLeftValue = pLeft.value;
+
 
 imgSend.onclick = function () {
-  if(textarea == "yes"){
-    // pLeft.value = "true";
-    console.log("ssssssss")
-  }
-}
-console.log(textarea);
-console.log(pLeft);
+
+};
+
+
 /* End chat */
 
 // Start date
 
 let date = document.getElementById("date");
-let date1 = new Date()
-let theYear = date1.getFullYear()
+let date1 = new Date();
+let theYear = date1.getFullYear();
 date.innerHTML = theYear.innerHTML =
-'Made With &#x2764; By <span>Mohamed Roshdy </span>2021-' +theYear + ' &copy;';
+  "Made With &#x2764; By <span>Mohamed Roshdy </span>2021-" +
+  theYear +
+  " &copy;";
 
 // End date
