@@ -79,36 +79,32 @@ function myFunction() {
 
 var imgBoxChat = document.getElementById("imgBoxChat");
 var fullchat = document.querySelector(".fullchat");
-var imgSend = document.getElementById("img-send");
-var textarea = document.getElementById("textarea");
-var pLeft = document.getElementById("left");
-var MiniMaze = document.getElementById("MiniMaze");
-
 imgBoxChat.onclick = function () {
   // fullchat.classList.toggle("ssssss");
   fullchat.style.display = "block";
   imgBoxChat.style.display = "none";
-};
+}
 
-
+var MiniMaze = document.getElementById("MiniMaze");
 MiniMaze.onclick = function () {
   fullchat.style.display = "none";
   imgBoxChat.style.display = "block";
-};
+}
 
-
-
-  var textareaValue = textarea.value;
-
-var pLeftValue = pLeft.value;
-
+var imgSend = document.getElementById("img-send");
+var textarea = document.getElementById("textarea");
+var pLeft = document.getElementById("left");
 
 imgSend.onclick = function () {
-
-};
-
+  if(textarea.value == "how are you"){
+    pLeft.innerHTML ="I'm fine. I hope you are fine. Thank you for contacting us";
+    pLeft.style.padding = "5px";
+    textarea.value = "";
+  }
+}
 
 /* End chat */
+
 
 // Start date
 
