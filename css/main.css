@@ -33,8 +33,12 @@
 /* End language */
 body {
   background-color: rgba(0, 0, 0, 0.75);
-  user-select: none;
   /* font-family: "Poppins", sans-serif; */
+}
+
+::selection {
+  background-color: aquamarine;
+  color: white;
 }
 
 /* Start chat */
