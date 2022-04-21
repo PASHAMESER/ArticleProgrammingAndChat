@@ -94,20 +94,23 @@ MiniMaze.onclick = function () {
 var imgSend = document.getElementById("img-send");
 var textarea = document.getElementById("textarea");
 var pLeft = document.getElementById("left");
+var pRight = document.getElementById("right");
 
 imgSend.onclick = function () {
   if(textarea.value == "how are you"){
-    pLeft.innerHTML ="I'm fine. I hope you are fine. Thank you for contacting us";
+    pLeft.innerHTML = textarea.value;
     pLeft.style.padding = "5px";
     textarea.value = "";
   }
+  setTimeout(function(){
+
+    pRight.innerHTML ="I'm fine. I hope you are fine. Thank you for contacting us";    
+    pRight.style.padding = "5px";
+  },1000);
+  
 }
 
 /* End chat */
-
-
-// Start date
-
 let date = document.getElementById("date");
 let date1 = new Date();
 let theYear = date1.getFullYear();
