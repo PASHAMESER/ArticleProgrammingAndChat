@@ -129,7 +129,6 @@ body {
   position: relative;
   text-align: right;
   left: 120px;
-  padding: 5px;
   margin: 10px 0px 0px 10px;
   max-width: 150px;
   background-color: #ffb620;
@@ -180,6 +179,7 @@ body {
 }
 
 /* End chat */
+
 
 /* Start Up To Top */
 .UP-TO-TOP {
